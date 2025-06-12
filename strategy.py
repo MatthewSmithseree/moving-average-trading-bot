@@ -10,5 +10,4 @@ def generate_signals(dataframe):
     dataframe["Signal"] = 0
     dataframe["Signal"] = np.where(dataframe["SMA_50"] > dataframe["SMA_200"], 1, 
                             np.where(dataframe["SMA_50"] < dataframe["SMA_200"], -1, 0))
-    dataframe.loc[dataframe["SMA_200"].isna(), "Signal"] = 0
-    dataframe.loc[dataframe["SMA_50"].isna(), "Signal"] = 0
+    dataframe.loc[(dataframe["SMA_50"].isna() | dataframe["SMA_200"].isna()), "Signal"] = 0
