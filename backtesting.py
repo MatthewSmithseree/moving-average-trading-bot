@@ -19,7 +19,7 @@ def backtest_strategy(dataframe):
     plt.xlabel("Time")
     plt.legend()
     plt.show()
-
+    return dataframe
 
 
 # Max drawdown – how deep was your biggest portfolio drop?
