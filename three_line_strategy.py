@@ -13,7 +13,7 @@ def generate_signals(dataframe):
 
     buy_signal = (
         (
-            (dataframe["SMA_9"] > dataframe["SMA_21"]) | (dataframe["SMA_21"] > dataframe["SMA_55"])
+            (dataframe["SMA_9"] > dataframe["SMA_21"]) & (dataframe["SMA_21"] > dataframe["SMA_55"])
         )
         & 
         (dataframe["Close"] > dataframe["SMA_9"])
@@ -21,7 +21,7 @@ def generate_signals(dataframe):
     
     sell_signal = (
         (
-            (dataframe["SMA_9"] < dataframe["SMA_21"]) | (dataframe["SMA_21"] < dataframe["SMA_55"])
+            (dataframe["SMA_9"] < dataframe["SMA_21"]) & (dataframe["SMA_21"] < dataframe["SMA_55"])
         )
         & 
         (dataframe["Close"] < dataframe["SMA_9"])
