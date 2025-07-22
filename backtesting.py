@@ -24,7 +24,7 @@ def backtest_strategy(dataframe):
     plt.figure(figsize = (12, 6))
     plt.plot(dataframe["Cumulative_Return"], label = "Buy & Hold")
     plt.plot(dataframe["Cumulative_Strategy"], label = "Strategy")
-    plt.title("Cumulative Performance")
+    plt.title(f"Cumulative Performance - ")
     plt.ylabel("Portfolio Value %")
     plt.xlabel("Time")
     plt.text(

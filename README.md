@@ -7,6 +7,3 @@ A Python-based trading algorithm that implements a simple moving average crossov
 - Calculate moving averages
 - Backtest strategy
 - Visualize performance
-
-## Status
-Currently implementing: Data ingestion and setup
